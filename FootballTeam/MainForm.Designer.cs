@@ -52,7 +52,7 @@
             this.btn_showteaminfo.Name = "btn_showteaminfo";
             this.btn_showteaminfo.Size = new System.Drawing.Size(637, 31);
             this.btn_showteaminfo.TabIndex = 22;
-            this.btn_showteaminfo.Text = "БАЗА ДАНИХ КОМАНД";
+            this.btn_showteaminfo.Text = "INFORMATION ABOUT TEAMS";
             this.btn_showteaminfo.UseVisualStyleBackColor = false;
             this.btn_showteaminfo.Click += new System.EventHandler(this.btn_showteaminfo_Click);
             // 
