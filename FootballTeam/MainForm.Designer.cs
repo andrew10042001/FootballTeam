@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btn_showteaminfo = new System.Windows.Forms.Button();
-            this.lb_name_secondteam = new System.Windows.Forms.Label();
-            this.lb_name_firstteam = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_goals_secondteam = new System.Windows.Forms.Label();
@@ -40,6 +38,7 @@
             this.btn_play = new System.Windows.Forms.Button();
             this.cb_firstteam = new System.Windows.Forms.ComboBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btn_showteaminfo
@@ -55,30 +54,6 @@
             this.btn_showteaminfo.Text = "INFORMATION ABOUT TEAMS";
             this.btn_showteaminfo.UseVisualStyleBackColor = false;
             this.btn_showteaminfo.Click += new System.EventHandler(this.btn_showteaminfo_Click);
-            // 
-            // lb_name_secondteam
-            // 
-            this.lb_name_secondteam.AutoSize = true;
-            this.lb_name_secondteam.BackColor = System.Drawing.Color.Transparent;
-            this.lb_name_secondteam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_name_secondteam.ForeColor = System.Drawing.Color.White;
-            this.lb_name_secondteam.Location = new System.Drawing.Point(381, 291);
-            this.lb_name_secondteam.Name = "lb_name_secondteam";
-            this.lb_name_secondteam.Size = new System.Drawing.Size(15, 18);
-            this.lb_name_secondteam.TabIndex = 21;
-            this.lb_name_secondteam.Text = "*";
-            // 
-            // lb_name_firstteam
-            // 
-            this.lb_name_firstteam.AutoSize = true;
-            this.lb_name_firstteam.BackColor = System.Drawing.Color.Transparent;
-            this.lb_name_firstteam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_name_firstteam.ForeColor = System.Drawing.Color.White;
-            this.lb_name_firstteam.Location = new System.Drawing.Point(126, 291);
-            this.lb_name_firstteam.Name = "lb_name_firstteam";
-            this.lb_name_firstteam.Size = new System.Drawing.Size(15, 18);
-            this.lb_name_firstteam.TabIndex = 20;
-            this.lb_name_firstteam.Text = "*";
             // 
             // label4
             // 
@@ -176,8 +151,6 @@
             this.ClientSize = new System.Drawing.Size(632, 429);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btn_showteaminfo);
-            this.Controls.Add(this.lb_name_secondteam);
-            this.Controls.Add(this.lb_name_firstteam);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb_goals_secondteam);
@@ -195,8 +168,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_showteaminfo;
-        private System.Windows.Forms.Label lb_name_secondteam;
-        private System.Windows.Forms.Label lb_name_firstteam;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_goals_secondteam;
@@ -205,6 +176,7 @@
         private System.Windows.Forms.Button btn_play;
         private System.Windows.Forms.ComboBox cb_firstteam;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
