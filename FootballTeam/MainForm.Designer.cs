@@ -64,9 +64,9 @@
             this.lb_name_secondteam.ForeColor = System.Drawing.Color.White;
             this.lb_name_secondteam.Location = new System.Drawing.Point(381, 291);
             this.lb_name_secondteam.Name = "lb_name_secondteam";
-            this.lb_name_secondteam.Size = new System.Drawing.Size(52, 18);
+            this.lb_name_secondteam.Size = new System.Drawing.Size(15, 18);
             this.lb_name_secondteam.TabIndex = 21;
-            this.lb_name_secondteam.Text = "label7";
+            this.lb_name_secondteam.Text = "*";
             // 
             // lb_name_firstteam
             // 
@@ -76,9 +76,9 @@
             this.lb_name_firstteam.ForeColor = System.Drawing.Color.White;
             this.lb_name_firstteam.Location = new System.Drawing.Point(126, 291);
             this.lb_name_firstteam.Name = "lb_name_firstteam";
-            this.lb_name_firstteam.Size = new System.Drawing.Size(52, 18);
+            this.lb_name_firstteam.Size = new System.Drawing.Size(15, 18);
             this.lb_name_firstteam.TabIndex = 20;
-            this.lb_name_firstteam.Text = "label6";
+            this.lb_name_firstteam.Text = "*";
             // 
             // btn_moreinfo
             // 
@@ -90,7 +90,7 @@
             this.btn_moreinfo.Name = "btn_moreinfo";
             this.btn_moreinfo.Size = new System.Drawing.Size(450, 49);
             this.btn_moreinfo.TabIndex = 19;
-            this.btn_moreinfo.Text = "Переглянути подробиці гри";
+            this.btn_moreinfo.Text = "More information";
             this.btn_moreinfo.UseVisualStyleBackColor = false;
             this.btn_moreinfo.Click += new System.EventHandler(this.btn_moreinfo_Click);
             // 
@@ -101,9 +101,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(379, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Оберіть команду";
+            this.label4.Text = "Choose team";
             // 
             // label3
             // 
@@ -112,9 +112,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(61, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Оберіть команду";
+            this.label3.Text = "Choose team";
             // 
             // lb_goals_secondteam
             // 
