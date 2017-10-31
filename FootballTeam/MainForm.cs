@@ -51,7 +51,14 @@ namespace FootballTeam
 
         private void Algorithm(object firstTeam, object secondTeam)
         {
-
+            //int overageEfficiency1;
+            //for (int i = 0; i <= 90; i++)
+            //{
+            //    foreach (var player in (firstTeam as Entities.Team).Humans)
+            //    {
+            //        overageEfficiency1 += player.HumanInfo.Efficiency;
+            //    }
+            //}
         }
 
         class Team
@@ -72,43 +79,63 @@ namespace FootballTeam
 
         private void generate()
         {
-            var TeamInsert = new Faker<Team>("en")
-                 .RuleFor(u => u.Name, f => f.Company.CompanyName())
-                 .RuleFor(u => u.Town, f => f.Address.City())
-                 .RuleFor(u => u.Country, f => f.Address.Country());
+            //var TeamInsert = new Faker<Team>("en")
+            //     .RuleFor(u => u.Name, f => f.Company.CompanyName())
+            //     .RuleFor(u => u.Town, f => f.Address.City())
+            //     .RuleFor(u => u.Country, f => f.Address.Country());
 
-            for (int i = 0; i < 3; i++)
-            {
-                var team = TeamInsert.Generate();
-                context.Teams.Add(
-                    new Entities.Team
-                    {
-                        Name = team.Name,
-                        City = team.Town,
-                        Country = team.Country
-                    });
-                context.SaveChanges();
-            }
+            //for (int i = 0; i < 300; i++)
+            //{
+            //    var team = TeamInsert.Generate();
+            //    context.Teams.Add(
+            //        new Entities.Team
+            //        {
+            //            Name = team.Name,
+            //            City = team.Town,
+            //            Country = team.Country
+            //        });
+            //    context.SaveChanges();
+            //}
 
             var FinfoInsert = new Faker<FInfo>("en")
                       .RuleFor(u => u.Name, f => f.Name.FirstName() + " ")
                       .RuleFor(u => u.age, f => f.Random.Int(18, 40))
                      .RuleFor(u => u.kkd, f => f.Random.Int(20, 98))
                   .RuleFor(u => u.position, f => FInfo.positionArr[f.Random.Int(0, 9)]);
-            for (int i = 0; i < 10; i++)
+
+            Random rnd = new Random();
+            for (int i = 0; i < 1000; i++)
             {
-                var player = FinfoInsert.Generate();
-                context.HumansInfo.Add(
-                    new HumanInfo
+                try
+                {
+                    Human _human = new Human
                     {
-                        Name = player.Name,
-                        Age = player.age,
-                        Position = player.position,
-                        Efficiency = player.kkd
-                    }
-                    );
-                context.SaveChanges();
+                        IdOfClub = rnd.Next(1, context.Teams.Count()),
+                        IdOfRole = 1,
+
+                    };
+                    context.Humans.Add(_human);
+                    context.SaveChanges();
+
+                    var player = FinfoInsert.Generate();
+                    context.HumansInfo.Add(
+                        new HumanInfo
+                        {
+                            HumanId = _human.HumanId,
+                            Name = player.Name,
+                            Age = player.age,
+                            Position = player.position,
+                            Efficiency = player.kkd
+                        }
+                        );
+                    context.SaveChanges();
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
     }
 }
+
