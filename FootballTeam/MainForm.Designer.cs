@@ -54,6 +54,7 @@
             this.btn_showteaminfo.TabIndex = 22;
             this.btn_showteaminfo.Text = "БАЗА ДАНИХ КОМАНД";
             this.btn_showteaminfo.UseVisualStyleBackColor = false;
+            this.btn_showteaminfo.Click += new System.EventHandler(this.btn_showteaminfo_Click);
             // 
             // lb_name_secondteam
             // 
@@ -91,6 +92,7 @@
             this.btn_moreinfo.TabIndex = 19;
             this.btn_moreinfo.Text = "Переглянути подробиці гри";
             this.btn_moreinfo.UseVisualStyleBackColor = false;
+            this.btn_moreinfo.Click += new System.EventHandler(this.btn_moreinfo_Click);
             // 
             // label4
             // 
@@ -159,6 +161,7 @@
             this.btn_play.TabIndex = 13;
             this.btn_play.Text = "PLAY";
             this.btn_play.UseVisualStyleBackColor = false;
+            this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
             // 
             // cb_firstteam
             // 
@@ -174,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(632, 419);
+            this.ClientSize = new System.Drawing.Size(632, 429);
             this.Controls.Add(this.btn_showteaminfo);
             this.Controls.Add(this.lb_name_secondteam);
             this.Controls.Add(this.lb_name_firstteam);
