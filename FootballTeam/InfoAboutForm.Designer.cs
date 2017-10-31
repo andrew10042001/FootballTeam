@@ -151,6 +151,7 @@
             this.cb_country.Name = "cb_country";
             this.cb_country.Size = new System.Drawing.Size(132, 21);
             this.cb_country.TabIndex = 4;
+            this.cb_country.SelectedIndexChanged += new System.EventHandler(this.cb_country_SelectedIndexChanged);
             // 
             // label2
             // 
