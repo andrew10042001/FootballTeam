@@ -50,6 +50,7 @@ namespace FootballTeam
                 }
             }
             CitiesWithoutD = Cities.Distinct().ToList();
+            //алфавітний порядок
             foreach (var item in CitiesWithoutD)
             {
                 cb_city.Items.Add(item);
@@ -59,8 +60,6 @@ namespace FootballTeam
         private void cb_city_SelectedIndexChanged(object sender, EventArgs e)
         {
             string cityMain = cb_city.Text;
-
-            List<object> Teams = new List<object>();
 
             foreach (var city in context.Teams)
             {
@@ -75,6 +74,11 @@ namespace FootballTeam
         private void cb_team_SelectedIndexChanged(object sender, EventArgs e)
         {
             Team team = context.Teams.SingleOrDefault(u => u.Name == cb_team.Text);
+            foreach (var player in team.Humans)
+            {
+                dg_players.Rows.Add(player.HumanId, player.Role.Name, player.HumanInfo.Age, player.HumanInfo.Name, player.HumanInfo.Position, player.HumanInfo.Efficiency);
+            }
+            
         }
     }
 }
