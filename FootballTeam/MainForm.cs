@@ -44,8 +44,8 @@ namespace FootballTeam
 
         private void btn_play_Click(object sender, EventArgs e)
         {
-            lb_name_firstteam.Text = cb_firstteam.SelectedText;
-            lb_name_secondteam.Text = cb_secondteam.SelectedText;
+            lb_name_firstteam.Text = cb_firstteam.Text;
+            lb_name_secondteam.Text = cb_secondteam.Text;
             Algorithm(cb_firstteam.SelectedItem, cb_secondteam.SelectedItem);
         }
 

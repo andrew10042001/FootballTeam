@@ -133,6 +133,7 @@
             this.cb_team.Name = "cb_team";
             this.cb_team.Size = new System.Drawing.Size(201, 21);
             this.cb_team.TabIndex = 6;
+            this.cb_team.SelectedIndexChanged += new System.EventHandler(this.cb_team_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -170,6 +171,7 @@
             this.cb_city.Name = "cb_city";
             this.cb_city.Size = new System.Drawing.Size(145, 21);
             this.cb_city.TabIndex = 2;
+            this.cb_city.SelectedIndexChanged += new System.EventHandler(this.cb_city_SelectedIndexChanged);
             // 
             // btn_search
             // 

@@ -37,9 +37,11 @@ namespace FootballTeam
 
         private void cb_country_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string countryMain = cb_country.Text;
+
             List<object> Cities = new List<object>();
             List<object> CitiesWithoutD = new List<object>();
-            string countryMain = cb_country.SelectedText;
+            
             foreach (var country in context.Teams)
             {
                 if(country.Country== countryMain)
@@ -52,6 +54,27 @@ namespace FootballTeam
             {
                 cb_city.Items.Add(item);
             }
+        }
+
+        private void cb_city_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cityMain = cb_city.Text;
+
+            List<object> Teams = new List<object>();
+
+            foreach (var city in context.Teams)
+            {
+                if (city.City == cityMain)
+                {
+                    cb_team.Items.Add(city.Name);
+                }
+            }
+           
+        }
+
+        private void cb_team_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Team team = context.Teams.SingleOrDefault(u => u.Name == cb_team.Text);
         }
     }
 }
