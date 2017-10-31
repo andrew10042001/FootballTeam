@@ -51,14 +51,35 @@ namespace FootballTeam
 
         private void Algorithm(object firstTeam, object secondTeam)
         {
-            //int overageEfficiency1;
-            //for (int i = 0; i <= 90; i++)
-            //{
-            //    foreach (var player in (firstTeam as Entities.Team).Humans)
-            //    {
-            //        overageEfficiency1 += player.HumanInfo.Efficiency;
-            //    }
-            //}
+            int overageEfficiency1 = 0;
+            int overageEfficiency2 = 0;
+            Random rnd = new Random();
+            for (int i = 0; i <= 90; i++)
+            {
+                foreach (var player in (firstTeam as Entities.Team).Humans)
+                {
+                    overageEfficiency1 += player.HumanInfo.Efficiency;
+                }
+                overageEfficiency1 /= (firstTeam as Entities.Team).Humans.Count;
+
+                foreach (var player in (secondTeam as Entities.Team).Humans)
+                {
+                    overageEfficiency2 += player.HumanInfo.Efficiency;
+                }
+                overageEfficiency2 /= (secondTeam as Entities.Team).Humans.Count;
+
+                overageEfficiency1 *= rnd.Next(0, 100);
+                overageEfficiency2 *= rnd.Next(0, 100);
+                if(overageEfficiency1 > overageEfficiency2 && overageEfficiency1 > 6000)
+                {
+                    lb_goals_firstteam.Text =  ((int.Parse(lb_goals_firstteam.Text)) + 1).ToString();
+                }
+                if (overageEfficiency2 > overageEfficiency1 && overageEfficiency2 > 6000)
+                {
+                    lb_goals_secondteam.Text = ((int.Parse(lb_goals_secondteam.Text)) + 1).ToString();
+                }
+
+            }
         }
 
         class Team
@@ -135,6 +156,11 @@ namespace FootballTeam
 
                 }
             }
+        }
+
+        private void lb_goals_secondteam_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
