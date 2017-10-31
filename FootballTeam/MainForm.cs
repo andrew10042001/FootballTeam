@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -78,7 +79,8 @@ namespace FootballTeam
                 {
                     lb_goals_secondteam.Text = ((int.Parse(lb_goals_secondteam.Text)) + 1).ToString();
                 }
-
+                progressBar1.Value++;
+                Thread.Sleep(1000);
             }
         }
 
@@ -159,6 +161,11 @@ namespace FootballTeam
         }
 
         private void lb_goals_secondteam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }

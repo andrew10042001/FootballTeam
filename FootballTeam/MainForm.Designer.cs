@@ -32,7 +32,6 @@
             this.btn_showteaminfo = new System.Windows.Forms.Button();
             this.lb_name_secondteam = new System.Windows.Forms.Label();
             this.lb_name_firstteam = new System.Windows.Forms.Label();
-            this.btn_moreinfo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_goals_secondteam = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.cb_secondteam = new System.Windows.Forms.ComboBox();
             this.btn_play = new System.Windows.Forms.Button();
             this.cb_firstteam = new System.Windows.Forms.ComboBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // btn_showteaminfo
@@ -79,20 +79,6 @@
             this.lb_name_firstteam.Size = new System.Drawing.Size(15, 18);
             this.lb_name_firstteam.TabIndex = 20;
             this.lb_name_firstteam.Text = "*";
-            // 
-            // btn_moreinfo
-            // 
-            this.btn_moreinfo.BackColor = System.Drawing.Color.Green;
-            this.btn_moreinfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_moreinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_moreinfo.ForeColor = System.Drawing.Color.White;
-            this.btn_moreinfo.Location = new System.Drawing.Point(93, 352);
-            this.btn_moreinfo.Name = "btn_moreinfo";
-            this.btn_moreinfo.Size = new System.Drawing.Size(450, 49);
-            this.btn_moreinfo.TabIndex = 19;
-            this.btn_moreinfo.Text = "More information";
-            this.btn_moreinfo.UseVisualStyleBackColor = false;
-            this.btn_moreinfo.Click += new System.EventHandler(this.btn_moreinfo_Click);
             // 
             // label4
             // 
@@ -173,16 +159,25 @@
             this.cb_firstteam.Size = new System.Drawing.Size(192, 28);
             this.cb_firstteam.TabIndex = 12;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(35, 364);
+            this.progressBar1.Maximum = 90;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(566, 36);
+            this.progressBar1.TabIndex = 23;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(632, 429);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btn_showteaminfo);
             this.Controls.Add(this.lb_name_secondteam);
             this.Controls.Add(this.lb_name_firstteam);
-            this.Controls.Add(this.btn_moreinfo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb_goals_secondteam);
@@ -202,7 +197,6 @@
         private System.Windows.Forms.Button btn_showteaminfo;
         private System.Windows.Forms.Label lb_name_secondteam;
         private System.Windows.Forms.Label lb_name_firstteam;
-        private System.Windows.Forms.Button btn_moreinfo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lb_goals_secondteam;
@@ -210,6 +204,7 @@
         private System.Windows.Forms.ComboBox cb_secondteam;
         private System.Windows.Forms.Button btn_play;
         private System.Windows.Forms.ComboBox cb_firstteam;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
