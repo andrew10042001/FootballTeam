@@ -29,6 +29,7 @@ namespace FootballTeam
                 withD.Add(countries.Country);
             }
             withoutD=withD.Distinct().ToList();
+            withoutD.Sort();
             foreach (var item in withoutD)
             {
                 cb_country.Items.Add(item);
@@ -51,6 +52,9 @@ namespace FootballTeam
             }
             CitiesWithoutD = Cities.Distinct().ToList();
             //алфавітний порядок
+
+
+            CitiesWithoutD.Sort();
             foreach (var item in CitiesWithoutD)
             {
                 cb_city.Items.Add(item);
