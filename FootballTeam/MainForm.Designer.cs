@@ -127,6 +127,7 @@
             this.lb_goals_secondteam.Size = new System.Drawing.Size(220, 241);
             this.lb_goals_secondteam.TabIndex = 16;
             this.lb_goals_secondteam.Text = "0";
+            this.lb_goals_secondteam.Click += new System.EventHandler(this.lb_goals_secondteam_Click);
             // 
             // lb_goals_firstteam
             // 
