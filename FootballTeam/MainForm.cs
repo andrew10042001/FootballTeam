@@ -17,7 +17,7 @@ namespace FootballTeam
         EFContext context = new EFContext();
         public MainForm()
         {
-            generate();
+            //generate();
             InitializeComponent();
             AddLists();
         }
